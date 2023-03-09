@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: 4800-group
+  description: A collection of all 4800 Sources
+spec:
+  targets:
+    - ./4800/group.yaml

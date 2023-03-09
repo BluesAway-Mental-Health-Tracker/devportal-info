@@ -1,0 +1,61 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-flutter
+  description: 4800 flutter team
+spec:
+  type: team
+  profile:
+    # Intentional no displayName for testing
+    email: amoghshiv99@gmail.com
+    picture: https://avatars.dicebear.com/api/identicon/team-a@example.com.svg?background=%23fff&margin=25
+  parent: backstage
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: amogh.prakash
+spec:
+  profile:
+    # Intentional no displayName for testing
+    displayName: Amogh Prakash
+    email: amoghshiv99@gmail.com
+    #picture: https://avatars.dicebear.com/api/avataaars/breanna-davison@example.com.svg?background=%23fff
+  memberOf: [team-flutter]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: harshit.rao
+spec:
+  profile:
+    displayName: Harshit Rao
+    email: harshitrao@cpp.edu
+    #picture: https://avatars.dicebear.com/api/avataaars/janelle-dawe@example.com.svg?background=%23fff
+  memberOf: [team-flutter]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: daverino
+spec:
+  profile:
+    displayName: Nigel Manning
+    email: nigel-manning@example.com
+    #picture: https://avatars.dicebear.com/api/avataaars/nigel-manning@example.com.svg?background=%23fff
+  memberOf: [team-flutter]
+---
+# This user is added as an example, to make it more easy for the "Guest"
+# sign-in option to demonstrate some entities being owned. In a regular org,
+# a guest user would probably not be registered like this.
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: sneha.vivek
+spec:
+  profile:
+    displayName: Sneha Vivek
+    email: guest@example.com
+    #picture: https://avatars.dicebear.com/api/avataaars/guest@example.com.svg?background=%23fff
+  memberOf: [team-flutter]
